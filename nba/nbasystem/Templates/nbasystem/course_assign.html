@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <th>Course</th>
+        <th>Faculty</th>
+        <th></th>
+    </tr>
+    {% for course in courses %}
+    <tr> 
+        <form action=""  method="post">
+        <input type="hidden" value="{{course.cid}}">
+        <td>{{course.name}}</td>
+        <td><select name="faculty" id="name">
+            {% for faculty in facultys %}
+            <option value="{{faculty.user}}">{{faculty.fname}}{{faculty.lname}}</option>
+            {% endfor %}
+        </select></td>
+        <td><button type="submit">assign</button></td>
+    </form>
+    </tr>
+    {% endfor %}
+</table>

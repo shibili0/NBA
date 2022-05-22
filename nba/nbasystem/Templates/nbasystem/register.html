@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/valorant.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>LOGIN</title>
+</head>
+<body>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+section {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+section .img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+}
+
+section .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+section .content .form h2 {
+    color: #607D8B;
+    font-weight: 600;
+    font-size: 2.0em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #E63643;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+section .content .form .input {
+    margin-bottom: 20px;
+
+}
+
+section .content .form .input span {
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: inline-block;
+    color: #607D8B;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+section .content .form .input input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607D8B;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: transparent;
+    border-radius: 30px;
+}
+
+section .content .form .input input[type="submit"] {
+    background: #E63643;
+    color: #FFF;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section .content .form .input input[type="submit"]:hover {
+    background: #E63643;
+}
+
+section .content .form .remember {
+    margin-bottom: 10px;
+    color: #607D8B;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+section .content .form .input p {
+    color: #607D8B;
+}
+
+section .content .form .input p a {
+    color: #E63643;
+}
+
+@media screen and (max-width: 600px) {
+    .img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 722px) {
+    .img {
+        display: none;
+    }
+
+    section .content .form h2 {
+        font-size: 1.8rem;
+    }
+
+    section .content .form .input p {
+        font-size: 1.0rem;
+        text-align: center;
+    }
+}
+
+    </style>    
+    <section>
+        <div class="img">
+            <img src="jett.png" alt="">
+        </div>
+        <div class="content">
+            <div class="form">
+                <h2>SIGN UP</h2>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="input">
+                      <span>Username</span>
+                      <label for="username"></label>
+                     {{form.username}}
+                    </div>
+
+                    <div class="input">
+                      <span>Firstname</span>
+                      <label for="first_name"></label>
+                     {{form.first_name}}
+                    </div>
+
+                    <div class="input">
+                      <span>Lastname</span>
+                      <label for="last_name"></label>
+                     {{form.last_name}}
+                    </div>
+                    
+                    <div class="input">
+                      <span>Student ID</span>
+                      <label for="sid"></label>
+      <input type="text" id="sid" name="sid" >
+                    </div>
+
+                    <div class="input">
+                      <span>Email Address</span>
+                      <label for="email"></label>
+                     {{form.email}}
+                    </div>
+
+                    <div class="input">
+                      <span>Password</span>
+                      <label for="password"></label>
+                     {{form.password1}}
+                    </div>
+
+                    <div class="input">
+                      <span>Confirm Password</span>
+                      <label for="password"></label>
+                      {{form.password2}}
+                    </div>
+
+                    <div class="input">
+                      <span>Contact Number</span>
+                      <label for="mobile_no"></label>
+      <input type="number" id="num" name="num" >
+                    </div>
+                      <div class="remember">
+                          <label><input type="checkbox"> Remember me </label>
+                      </div>
+                      <div class="input">
+                        <input type="submit" value="Sign up" name="submit">  
+                      </div>
+                      <div class="input">
+                          <a href="{% url 'home' %}">Back</a></p>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register Form </title>
+     <link rel="stylesheet" href="styleforregister.css"> -->
+  <!-- </head>
+  <body>
+
+    <div class="login-box">
+      <img src="" class="avatar" alt="Avatar Image">
+      <h1>Register Here</h1>
+
+      <form action="" method="post">
+       {% csrf_token %}
+        <label for="username">UserName</label>
+        {{form.username}}<br>
+        <label for="first_name">First Name</label>
+        {{form.first_name}}
+        <br>
+
+        <label for="last_name">Last Name</label>
+        {{form.last_name}}
+        <br>
+        <label for="sid">Student ID</label>
+        <input type="text" id="sid" name="sid" placeholder="Enter your ward id ">
+          <br>
+        <label for="email">Email</label>
+        {{form.email}} <br>
+        <label for="password">Password</label>
+        {{form.password1}}<br>
+        <label for="password">Confirm Password</label>
+        {{form.password2}}  
+        <br>
+
+        <label for="mobile_no.">Contact No.</label>
+        <input type="number" id="num" name="num" placeholder="Enter your mobile number">
+          <br>
+       
+        <input type="submit" value="Register">
+        
+        
+      </form>
+      {{form.errors}}
+      <button type="submit" postion="bottom"><a href="{% url 'home' %}">Back</a></button>
+    </div>
+  </body>
+</html> 
+
+  --> -->

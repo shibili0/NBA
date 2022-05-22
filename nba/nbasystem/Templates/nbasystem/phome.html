@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #E63643;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #cd4b53;}
+</style>
+</head>
+<body>
+
+<h2>Welcome Parent</h2>
+<p></p>
+
+<div class="dropdown">
+  <button class="dropbtn">ACCOUNT</button>
+  <div class="dropdown-content">
+        <p>{{parent.fname}}{{parent.lname}}</p>
+        <p>{{parent.username}}</p>
+        <p>{{parent.sid}}</p>
+        <p>{{parent.email}}</p>
+        <p>{{parent.phn}}</p>
+    
+    
+    
+  </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">ATTENDENCE</button>
+    <div class="dropdown-content">
+      <a href="#">S1</a>
+      <a href="#">S2</a>
+      <a href="#">S3</a>
+      <a href="#">S4</a>
+      <a href="#">S5</a>
+      <a href="#">S6</a>
+      <a href="#">S7</a>
+      <a href="#">S8</a>
+      
+      
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">INTERNAL MARKS</button>
+    <div class="dropdown-content">
+      <a href="#">S1</a>
+      <a href="#">S2</a>
+      <a href="#">S3</a>
+      <a href="#">S4</a>
+      <a href="#">S5</a>
+      <a href="#">S6</a>
+      <a href="#">S7</a>
+      <a href="#">S8</a>
+      
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">UNIVERSITY MARKS</button>
+    <div class="dropdown-content">
+      <a href="#">S1</a>
+      <a href="#"> S2</a>
+      <a href="#">S3</a>
+      <a href="#">S4</a>
+      <a href="#">S5</a>
+      <a href="#">S6</a>
+      <a href="#">S7</a>
+      <a href="#">S8</a>
+      
+      
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">NOTIFICATION</button>
+    <div class="dropdown-content">
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">LOGOUT</button>
+            <div class="dropdown-content">
+              <a href="{% url 'logout' %}">Logout</a>
+        <br>
+                </div>
+                </div>
+</body>
+</html>
